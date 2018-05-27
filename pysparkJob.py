@@ -1,3 +1,6 @@
+#Author: Andre Foote
+#Date: 27th May 2018
+
 from pyspark import SparkContext
 from pyspark.sql import SQLContext
 from pyspark.sql import Row
