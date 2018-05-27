@@ -97,7 +97,7 @@ if __name__ == "__main__":
     #Standard deviation function
     def SDCalc():
         global poi1SD, poi2SD, poi3SD
-        for x in range(0, 19998):
+        for x in range(0, no_dupes_length):
             if labelCol[x] == "POI1":
                 poi1SD += (distanceCol[x]-d1Avg)**2
             elif labelCol[x] == "POI2":
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     density3 = d3Count/area3
     
     #Print all notable statistics and values to text file
-    print("POI_radii: ", radius1, radius2, radius3, "\nPOI_count: ", d1Count, d2Count, d3Count, "\nPOI_Avg: ", d1Avg, d2Avg, d3Avg, "\nPOI_STD: ", poi1SD, poi2SD, poi3SD, "\nPOI_Area: ", area1, area2, area3, "\nPOI_density: ", density1, density2, density3, file=open("output.txt", "w"))
+    print("POI_count: ", d1Count, d2Count, d3Count, "\nPOI_Avg: ", d1Avg, d2Avg, d3Avg, "\nPOI_STD: ", poi1SD, poi2SD, poi3SD, "POI_radius: ", radius1, radius2, radius3, "\nPOI_Area: ", area1, area2, area3, "\nPOI_density: ", density1, density2, density3, file=open("output.txt", "w"))
 
     #Finally, create and plot representative POI areas
     circle1 = plt.Circle((poiList[0][0], poiList[0][1]), radius=radius1, color='r') #POI1
