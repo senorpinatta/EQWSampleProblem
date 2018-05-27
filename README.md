@@ -1,7 +1,7 @@
 # EQWSampleProblem
 
 To run the solution:
-1. Navigate to the submission folder.
+1. Navigate to the downloaded and unzipped EQWSampleProblem folder.
 2. In the command line, enter:
     
     spark-submit --deploy-mode client \<Path to pysparkJob.py\>
