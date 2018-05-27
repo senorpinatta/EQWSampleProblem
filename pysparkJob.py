@@ -18,7 +18,7 @@ if __name__ == "__main__":
     #Load csv into dataframe
     df = sqlContext.read.format('com.databricks.spark.csv').options(header='true', inferschema='true').load('DataSample.csv')
 
-    #Remove suspicious requests (ie records with identical fields)
+    #Remove suspicious requests (ie records with identical geoinfor and timest fields)
     df_no_dupes = df.dropDuplicates(['TimeSt','Latitude','Longitude'])
     no_dupes_length = df_no_dupes.count()-1
 
