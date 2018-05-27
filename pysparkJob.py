@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     def distanceStats(labelCol, distanceCol):
         global radius1, radius2, radius3, d1Count, d2Count, d3Count, d1Avg, d2Avg, d3Avg
-        for x in range(0, no_dupes_length-1):
+        for x in range(0, no_dupes_length):
             d1 = d1List[x]
             d2 = d2List[x]
             d3 = d3List[x]
